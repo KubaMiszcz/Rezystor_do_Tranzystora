@@ -1,0 +1,11 @@
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RadiatorDoTranzystora\bin\Debug\RadiatorDoTranzystora 1.0.exe.config
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoBazy.csproj.GenerateResource.Cache
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoBazy.Form111.resources
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoBazy.HelpForm.resources
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Debug\RezystorDoBazy 1.0.exe.config
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Debug\RezystorDoBazy 1.0.exe
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Debug\RezystorDoBazy 1.0.pdb
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoBazy.Properties.Resources.resources
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoBazy 1.0.exe
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoBazy 1.0.pdb
+d:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoBazy.csprojResolveAssemblyReference.cache

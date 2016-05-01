@@ -1,0 +1,2 @@
+# Rezystor do bazy tranzystora
+
