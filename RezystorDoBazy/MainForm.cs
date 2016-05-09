@@ -25,23 +25,23 @@ namespace RezystorDoBazy
 
         void tb2val()
         {
-            Rl = float.Parse(tbRl.Text);
-            Uwe = float.Parse(tbUwe.Text);
-            Uwy = float.Parse(tbUwy.Text);
-            k = float.Parse(tbk.Text);
-            Ucesat = float.Parse(tbUcesat.Text);
-            Ube = float.Parse(tbUbe.Text);
-            hfe = float.Parse(tbhfe.Text);
-            Ptot = float.Parse(tbPtot.Text);
+            Rl = float.Parse(tbRl.Text, System.Globalization.CultureInfo.InvariantCulture);
+            Uwe = float.Parse(tbUwe.Text, System.Globalization.CultureInfo.InvariantCulture);
+            Uwy = float.Parse(tbUwy.Text, System.Globalization.CultureInfo.InvariantCulture);
+            k = float.Parse(tbk.Text, System.Globalization.CultureInfo.InvariantCulture);
+            Ucesat = float.Parse(tbUcesat.Text, System.Globalization.CultureInfo.InvariantCulture);
+            Ube = float.Parse(tbUbe.Text, System.Globalization.CultureInfo.InvariantCulture);
+            hfe = float.Parse(tbhfe.Text, System.Globalization.CultureInfo.InvariantCulture);
+            Ptot = float.Parse(tbPtot.Text, System.Globalization.CultureInfo.InvariantCulture);
        }
 
         void val2tb()
         {
-            tbIload.Text = Math.Round(Iload,2).ToString();
-            tbUload.Text = Math.Round(Uload,2).ToString();
-            tbIb.Text = Math.Round(Ib,2).ToString();
-            tbRb.Text = Math.Round(Rb,2).ToString();
-            tbP.Text = Math.Round(P,2).ToString();
+            tbIload.Text = Math.Round(Iload,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            tbUload.Text = Math.Round(Uload,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            tbIb.Text = Math.Round(Ib,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            tbRb.Text = Math.Round(Rb,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            tbP.Text = Math.Round(P,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
         }
         
         private void button1_Click(object sender, EventArgs e)

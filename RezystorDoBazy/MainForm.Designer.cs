@@ -75,9 +75,9 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(11, 18);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(60, 13);
+            this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Uce-sat [V]";
+            this.label1.Text = "Vce-sat [V]";
             // 
             // tbUcesat
             // 
@@ -145,9 +145,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(28, 40);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(43, 13);
+            this.label10.Size = new System.Drawing.Size(42, 13);
             this.label10.TabIndex = 10;
-            this.label10.Text = "Ube [V]";
+            this.label10.Text = "Vbe [V]";
             // 
             // label6
             // 
@@ -285,18 +285,18 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(33, 66);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(44, 13);
+            this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 7;
-            this.label4.Text = "Uwy [V]";
+            this.label4.Text = "Vout [V]";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(32, 42);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 13);
+            this.label5.Size = new System.Drawing.Size(38, 13);
             this.label5.TabIndex = 9;
-            this.label5.Text = "Uwe [V]";
+            this.label5.Text = "Vin [V]";
             // 
             // label3
             // 
@@ -435,15 +435,16 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(27, 41);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(51, 13);
+            this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 13;
-            this.label8.Text = "Uload [V]";
+            this.label8.Text = "Vload [V]";
             // 
             // toolTip1
             // 
-            this.toolTip1.AutoPopDelay = 5000;
-            this.toolTip1.InitialDelay = 200;
-            this.toolTip1.ReshowDelay = 200;
+            this.toolTip1.AutomaticDelay = 200;
+            this.toolTip1.AutoPopDelay = 2000;
+            this.toolTip1.InitialDelay = 50;
+            this.toolTip1.ReshowDelay = 40;
             // 
             // Form111
             // 
