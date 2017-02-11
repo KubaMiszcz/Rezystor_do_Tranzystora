@@ -9,3 +9,4 @@ D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\R
 D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Release\RezystorDoBazy 1.0.pdb
 D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Release\RezystorDoBazy 2.0.exe.config
 D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Release\RezystorDoTranzystora 2.0.exe.config
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Release\RezystorDoTranzystora.Properties.Resources.resources

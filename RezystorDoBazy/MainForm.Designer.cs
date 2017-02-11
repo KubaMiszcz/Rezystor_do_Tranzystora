@@ -1,4 +1,4 @@
-﻿namespace RezystorDoBazy
+﻿namespace RezystorDoTranzystora
 {
     partial class Form111
     {
@@ -520,7 +520,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RezystorDoBazy.Properties.Resources.ok;
+            this.pictureBox1.Image = global::RezystorDoTranzystora.Properties.Resources.ok;
             this.pictureBox1.Location = new System.Drawing.Point(12, 128);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(20, 20);
@@ -531,7 +531,7 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.BackgroundImage = global::RezystorDoBazy.Properties.Resources.diagram;
+            this.pictureBox2.BackgroundImage = global::RezystorDoTranzystora.Properties.Resources.diagram;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Location = new System.Drawing.Point(3, 3);
             this.pictureBox2.Name = "pictureBox2";
@@ -541,35 +541,35 @@
             // 
             // wczytajToolStripMenuItem
             // 
-            this.wczytajToolStripMenuItem.Image = global::RezystorDoBazy.Properties.Resources.fopen;
+            this.wczytajToolStripMenuItem.Image = global::RezystorDoTranzystora.Properties.Resources.fopen;
             this.wczytajToolStripMenuItem.Name = "wczytajToolStripMenuItem";
             this.wczytajToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
             this.wczytajToolStripMenuItem.Click += new System.EventHandler(this.wczytajToolStripMenuItem_Click);
             // 
             // zapiszToolStripMenuItem
             // 
-            this.zapiszToolStripMenuItem.Image = global::RezystorDoBazy.Properties.Resources.fsave;
+            this.zapiszToolStripMenuItem.Image = global::RezystorDoTranzystora.Properties.Resources.fsave;
             this.zapiszToolStripMenuItem.Name = "zapiszToolStripMenuItem";
             this.zapiszToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
             this.zapiszToolStripMenuItem.Click += new System.EventHandler(this.zapiszToolStripMenuItem_Click);
             // 
             // zapiszJakoToolStripMenuItem
             // 
-            this.zapiszJakoToolStripMenuItem.Image = global::RezystorDoBazy.Properties.Resources.fsaveas;
+            this.zapiszJakoToolStripMenuItem.Image = global::RezystorDoTranzystora.Properties.Resources.fsaveas;
             this.zapiszJakoToolStripMenuItem.Name = "zapiszJakoToolStripMenuItem";
             this.zapiszJakoToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
             this.zapiszJakoToolStripMenuItem.Click += new System.EventHandler(this.zapiszJakoToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
-            this.helpToolStripMenuItem.Image = global::RezystorDoBazy.Properties.Resources.fhelp;
+            this.helpToolStripMenuItem.Image = global::RezystorDoTranzystora.Properties.Resources.fhelp;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Alignment = System.Windows.Forms.ToolStripItemAlignment.Right;
-            this.exitToolStripMenuItem.Image = global::RezystorDoBazy.Properties.Resources.fexit;
+            this.exitToolStripMenuItem.Image = global::RezystorDoTranzystora.Properties.Resources.fexit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
             // 

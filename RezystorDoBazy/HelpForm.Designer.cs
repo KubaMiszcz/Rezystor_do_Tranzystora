@@ -1,4 +1,4 @@
-﻿namespace RezystorDoBazy
+﻿namespace RezystorDoTranzystora
 {
     partial class HelpForm
     {
@@ -37,7 +37,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::RezystorDoBazy.Properties.Resources.obliczenia;
+            this.pictureBox2.Image = global::RezystorDoTranzystora.Properties.Resources.obliczenia;
             this.pictureBox2.Location = new System.Drawing.Point(0, 219);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(303, 219);
@@ -47,7 +47,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::RezystorDoBazy.Properties.Resources.help;
+            this.pictureBox1.Image = global::RezystorDoTranzystora.Properties.Resources.help;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(303, 219);

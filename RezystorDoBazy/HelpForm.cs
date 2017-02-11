@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using RezystorDoBazy;
+using RezystorDoTranzystora;
 
-namespace RezystorDoBazy
+namespace RezystorDoTranzystora
 {
     public partial class HelpForm : Form
     {

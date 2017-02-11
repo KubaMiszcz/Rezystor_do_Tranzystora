@@ -9,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace RezystorDoBazy
+namespace RezystorDoTranzystora
 {
     public partial class Form111 : Form
     {
@@ -225,12 +225,12 @@ namespace RezystorDoBazy
 
             if (P < Ptot)
             {
-                pictureBox1.Image = RezystorDoBazy.Properties.Resources.ok;
+                pictureBox1.Image = RezystorDoTranzystora.Properties.Resources.ok;
                 tbP.BackColor = Color.PeachPuff;
             }
             else
             {
-                pictureBox1.Image = RezystorDoBazy.Properties.Resources.error;
+                pictureBox1.Image = RezystorDoTranzystora.Properties.Resources.error;
                 tbP.BackColor = Color.Red;
             }
 
