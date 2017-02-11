@@ -1,1 +1,3 @@
 # do zrobienia
+przerob graficznie ze na rysunku daj txtboxy
+dodaj zapisz/wczytaj parametry projektu czyli ustawienia dane w txtboxach
