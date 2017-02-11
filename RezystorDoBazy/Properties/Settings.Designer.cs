@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace RezystorDoBazy.Properties {
+namespace RezystorDoTranzystora.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]

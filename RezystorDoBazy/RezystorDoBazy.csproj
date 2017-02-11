@@ -7,8 +7,8 @@
     <ProjectGuid>{0F680DD3-E7C1-4B16-8E57-946848C671A3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RezystorDoBazy</RootNamespace>
-    <AssemblyName>RezystorDoBazy 1.0</AssemblyName>
+    <RootNamespace>RezystorDoTranzystora</RootNamespace>
+    <AssemblyName>RezystorDoTranzystora 2.0</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -119,6 +119,14 @@
     <None Include="Resources\ok.png" />
     <Content Include="FIJYQGEH4AGJN0C.MEDIUM.ico" />
     <None Include="Resources\obliczenia.jpg" />
+    <None Include="Resources\diagram1.png" />
+    <None Include="Resources\diagram.png" />
+    <None Include="Resources\fopen.png" />
+    <None Include="Resources\fsave.png" />
+    <None Include="Resources\fsaveas.png" />
+    <None Include="Resources\help1.png" />
+    <None Include="Resources\fhelp.png" />
+    <None Include="Resources\fexit.png" />
     <Content Include="s-l96.ico" />
   </ItemGroup>
   <ItemGroup>
