@@ -7,3 +7,4 @@ D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\R
 D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Release\RezystorDoTranzystora.csproj.GenerateResource.Cache
 D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Release\RezystorDoTranzystora 2.0.exe
 D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Release\RezystorDoTranzystora 2.0.pdb
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Release\RezystorDoTranzystora.csprojResolveAssemblyReference.cache

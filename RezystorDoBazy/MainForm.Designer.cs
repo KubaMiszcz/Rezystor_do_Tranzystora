@@ -40,6 +40,7 @@
             this.tbk = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.tbP = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.tbhfe = new System.Windows.Forms.TextBox();
@@ -66,25 +67,24 @@
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.Mainpanel = new System.Windows.Forms.Panel();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.wczytajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszJakoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.Mainpanel.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -208,6 +208,16 @@
             this.tbP.Text = "1";
             this.tbP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::RezystorDoTranzystora.Properties.Resources.ok;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 128);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 15;
+            this.pictureBox1.TabStop = false;
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -274,19 +284,20 @@
             // tbRload
             // 
             this.tbRload.BackColor = System.Drawing.SystemColors.Info;
-            this.tbRload.Location = new System.Drawing.Point(77, 14);
+            this.tbRload.Location = new System.Drawing.Point(80, 14);
             this.tbRload.Name = "tbRload";
             this.tbRload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbRload.Size = new System.Drawing.Size(40, 20);
+            this.tbRload.Size = new System.Drawing.Size(50, 20);
             this.tbRload.TabIndex = 1;
             this.tbRload.Text = "50";
             this.tbRload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbRload.TextChanged += new System.EventHandler(this.tbTamb_TextChanged);
+            this.tbRload.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbRload_KeyDown);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(5, 17);
+            this.label2.Location = new System.Drawing.Point(8, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 6;
@@ -319,7 +330,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 40);
+            this.label3.Location = new System.Drawing.Point(9, 40);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 13);
             this.label3.TabIndex = 8;
@@ -329,11 +340,11 @@
             // 
             this.tbIload.BackColor = System.Drawing.Color.PeachPuff;
             this.tbIload.Cursor = System.Windows.Forms.Cursors.No;
-            this.tbIload.Location = new System.Drawing.Point(77, 37);
+            this.tbIload.Location = new System.Drawing.Point(80, 37);
             this.tbIload.Name = "tbIload";
             this.tbIload.ReadOnly = true;
             this.tbIload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbIload.Size = new System.Drawing.Size(40, 20);
+            this.tbIload.Size = new System.Drawing.Size(50, 20);
             this.tbIload.TabIndex = 4;
             this.tbIload.TabStop = false;
             this.tbIload.Text = "2.4";
@@ -344,17 +355,18 @@
             // 
             this.label12.AutoSize = true;
             this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Location = new System.Drawing.Point(8, 38);
+            this.label12.Location = new System.Drawing.Point(2, 38);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(58, 13);
+            this.label12.Size = new System.Drawing.Size(75, 13);
             this.label12.TabIndex = 17;
-            this.label12.Text = "Rb [kOhm]";
+            this.label12.Text = "Rbase [kOhm]";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // tbRbase
             // 
             this.tbRbase.BackColor = System.Drawing.Color.PeachPuff;
             this.tbRbase.Cursor = System.Windows.Forms.Cursors.No;
-            this.tbRbase.Location = new System.Drawing.Point(65, 35);
+            this.tbRbase.Location = new System.Drawing.Point(76, 35);
             this.tbRbase.Name = "tbRbase";
             this.tbRbase.ReadOnly = true;
             this.tbRbase.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -368,17 +380,18 @@
             // 
             this.label9.AutoSize = true;
             this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Location = new System.Drawing.Point(26, 16);
+            this.label9.Location = new System.Drawing.Point(20, 16);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(40, 13);
+            this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 14;
-            this.label9.Text = "Ib [mA]";
+            this.label9.Text = "Ibase [mA]";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // tbIbase
             // 
             this.tbIbase.BackColor = System.Drawing.Color.PeachPuff;
             this.tbIbase.Cursor = System.Windows.Forms.Cursors.No;
-            this.tbIbase.Location = new System.Drawing.Point(65, 13);
+            this.tbIbase.Location = new System.Drawing.Point(76, 13);
             this.tbIbase.Name = "tbIbase";
             this.tbIbase.ReadOnly = true;
             this.tbIbase.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -392,11 +405,11 @@
             // 
             this.tbUload.BackColor = System.Drawing.Color.PeachPuff;
             this.tbUload.Cursor = System.Windows.Forms.Cursors.No;
-            this.tbUload.Location = new System.Drawing.Point(77, 59);
+            this.tbUload.Location = new System.Drawing.Point(80, 59);
             this.tbUload.Name = "tbUload";
             this.tbUload.ReadOnly = true;
             this.tbUload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.tbUload.Size = new System.Drawing.Size(40, 20);
+            this.tbUload.Size = new System.Drawing.Size(50, 20);
             this.tbUload.TabIndex = 9;
             this.tbUload.TabStop = false;
             this.tbUload.Text = "1";
@@ -406,7 +419,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(27, 62);
+            this.label8.Location = new System.Drawing.Point(30, 62);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(50, 13);
             this.label8.TabIndex = 13;
@@ -439,10 +452,10 @@
             this.groupBox4.Controls.Add(this.label3);
             this.groupBox4.Controls.Add(this.tbRload);
             this.groupBox4.Controls.Add(this.label2);
-            this.groupBox4.Location = new System.Drawing.Point(166, 43);
+            this.groupBox4.Location = new System.Drawing.Point(152, 43);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox4.Size = new System.Drawing.Size(123, 90);
+            this.groupBox4.Size = new System.Drawing.Size(137, 86);
             this.groupBox4.TabIndex = 18;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Load";
@@ -453,10 +466,10 @@
             this.groupBox5.Controls.Add(this.tbIbase);
             this.groupBox5.Controls.Add(this.label9);
             this.groupBox5.Controls.Add(this.tbRbase);
-            this.groupBox5.Location = new System.Drawing.Point(131, 209);
+            this.groupBox5.Location = new System.Drawing.Point(132, 209);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Padding = new System.Windows.Forms.Padding(5);
-            this.groupBox5.Size = new System.Drawing.Size(120, 63);
+            this.groupBox5.Size = new System.Drawing.Size(127, 60);
             this.groupBox5.TabIndex = 16;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Rbazy";
@@ -500,6 +513,17 @@
             this.Mainpanel.Size = new System.Drawing.Size(466, 313);
             this.Mainpanel.TabIndex = 25;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
+            this.pictureBox2.BackgroundImage = global::RezystorDoTranzystora.Properties.Resources.diagram;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(465, 306);
+            this.pictureBox2.TabIndex = 24;
+            this.pictureBox2.TabStop = false;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -513,31 +537,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(473, 24);
             this.menuStrip1.TabIndex = 26;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::RezystorDoTranzystora.Properties.Resources.ok;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 128);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 15;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.SystemColors.Control;
-            this.pictureBox2.BackgroundImage = global::RezystorDoTranzystora.Properties.Resources.diagram;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 3);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(465, 306);
-            this.pictureBox2.TabIndex = 24;
-            this.pictureBox2.TabStop = false;
             // 
             // wczytajToolStripMenuItem
             // 
@@ -573,6 +572,10 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form111
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -589,6 +592,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
@@ -599,10 +603,9 @@
             this.groupBox7.PerformLayout();
             this.Mainpanel.ResumeLayout(false);
             this.Mainpanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

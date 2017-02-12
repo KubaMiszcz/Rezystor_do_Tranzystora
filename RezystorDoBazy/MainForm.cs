@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -14,16 +15,18 @@ namespace RezystorDoTranzystora
     public partial class Form111 : Form
     {
         float hfe, Ucesat, Ube, Ptot;//z DS
-        float k, Rl, Uwy, Uwe;//dane
-        float Ib, P, Rb, Uload,Iload;//wyniki
+        float k, Rload, Uwy, Uwe;//dane
+        float Ibase, P, Rbase, Uload,Iload;//wyniki
         private string _currentSavedFileName;
         private string _titleBar;
+        private NumberFormatInfo nfi;
 
 
         public Form111()
         {
             InitializeComponent();
-
+            nfi = new NumberFormatInfo();
+            nfi.NumberDecimalSeparator = ".";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -41,7 +44,7 @@ namespace RezystorDoTranzystora
             toolTip1.SetToolTip(tbUload, "napiecie na obciążeniu Rload");
             toolTip1.SetToolTip(tbIbase, "prad bazy,\n uwaga na jednostke! standardowo mA\n ale jak mniej niz 1ma\n to podaje w uA");
             toolTip1.SetToolTip(tbk, "wspolczynnik przesterowania = 2do5,\n im większy tym tranzystor dłużej się wyłącza");
-            toolTip1.SetToolTip(tbRbase, "rezystor do bazy, przy ktorym poplynie wyliczony Ib");
+            toolTip1.SetToolTip(tbRbase, "rezystor do bazy, przy ktorym poplynie wyliczony Ibase");
             toolTip1.SetToolTip(tbP, "moc wydzielona na tranzystorze");
 
             obliczRb();
@@ -49,23 +52,23 @@ namespace RezystorDoTranzystora
 
         void tb2val()
         {
-            Rl = float.Parse(tbRload.Text, System.Globalization.CultureInfo.InvariantCulture);
-            Uwe = float.Parse(tbUwe.Text, System.Globalization.CultureInfo.InvariantCulture);
-            Uwy = float.Parse(tbUwy.Text, System.Globalization.CultureInfo.InvariantCulture);
-            k = float.Parse(tbk.Text, System.Globalization.CultureInfo.InvariantCulture);
-            Ucesat = float.Parse(tbUcesat.Text, System.Globalization.CultureInfo.InvariantCulture);
-            Ube = float.Parse(tbUbe.Text, System.Globalization.CultureInfo.InvariantCulture);
-            hfe = float.Parse(tbhfe.Text, System.Globalization.CultureInfo.InvariantCulture);
-            Ptot = float.Parse(tbPtot.Text, System.Globalization.CultureInfo.InvariantCulture);
+            Rload = float.Parse(tbRload.Text, CultureInfo.InvariantCulture);
+            Uwe = float.Parse(tbUwe.Text, CultureInfo.InvariantCulture);
+            Uwy = float.Parse(tbUwy.Text, CultureInfo.InvariantCulture);
+            k = float.Parse(tbk.Text, CultureInfo.InvariantCulture);
+            Ucesat = float.Parse(tbUcesat.Text, CultureInfo.InvariantCulture);
+            Ube = float.Parse(tbUbe.Text, CultureInfo.InvariantCulture);
+            hfe = float.Parse(tbhfe.Text, CultureInfo.InvariantCulture);
+            Ptot = float.Parse(tbPtot.Text, CultureInfo.InvariantCulture);
        }
 
         void val2tb()
         {
-            tbIload.Text = Math.Round(Iload,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
-            tbUload.Text = Math.Round(Uload,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
-            tbIbase.Text = Math.Round(Ib,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
-            tbRbase.Text = Math.Round(Rb,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
-            tbP.Text = Math.Round(P,2).ToString(System.Globalization.CultureInfo.InvariantCulture);
+            tbIload.Text = Math.Round(Iload,2).ToString(nfi);
+            tbUload.Text = Math.Round(Uload,2).ToString(nfi);
+            tbIbase.Text = Math.Round(Ibase,2).ToString(nfi);
+            tbRbase.Text = Math.Round(Rbase,2).ToString(nfi);
+            tbP.Text = Math.Round(P,2).ToString(nfi);
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -86,8 +89,6 @@ namespace RezystorDoTranzystora
             //proc.Start();
         }
          
-
-
 
         private void tbk_TextChanged(object sender, EventArgs e)
         {
@@ -214,14 +215,42 @@ namespace RezystorDoTranzystora
             }
         }
 
+        private void tbRload_KeyDown(object sender, KeyEventArgs e)
+        {
+            //Rload = float.Parse(tbRload.Text);
+            if (e.KeyCode == Keys.Up)
+            {
+                Rload += 0.01f;
+                tbRload.Text = Rload.ToString(nfi);
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                Rload -= 0.01f;
+                tbRload.Text = Rload.ToString(nfi);
+            }
+            obliczRb();
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+ 
+
         private void obliczRb()
         {
             tb2val();
-            Iload = (Uwy - Ucesat) / Rl;
+            Iload = (Uwy - Ucesat) / Rload;
             Uload = Uwy - Ucesat;
-            Ib = (Iload * k) / hfe;
-            Rb = (Uwe - Ube) / Ib;
-            P = Ib*Ube + Iload * Ucesat;
+            Ibase = (Iload * k) / hfe;
+            Rbase = (Uwe - Ube) / Ibase;
+            P = Ibase*Ube + Iload * Ucesat;
 
             if (P < Ptot)
             {
@@ -235,17 +264,17 @@ namespace RezystorDoTranzystora
             }
 
             Iload=Iload * 1000f;//A->mA
-            Ib = Ib * 1000f;//A->mA
-            if (Ib < 1f)
+            Ibase = Ibase * 1000f;//A->mA
+            if (Ibase < 1f)
             {
-                Ib = Ib * 1000f;//mA->uA
-                label9.Text = "Ib [uA]";
+                Ibase = Ibase * 1000f;//mA->uA
+                label9.Text = "Ibase [uA]";
             }
             else
             {
-                label9.Text = "Ib [mA]";
+                label9.Text = "Ibase [mA]";
             }
-            Rb = Rb / 1000f; //ohm->kohm
+            Rbase = Rbase / 1000f; //ohm->kohm
             val2tb();
         }
 

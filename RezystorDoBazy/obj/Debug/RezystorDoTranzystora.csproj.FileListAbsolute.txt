@@ -1,0 +1,9 @@
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Debug\RezystorDoTranzystora 2.0.exe.config
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Debug\RezystorDoTranzystora 2.0.exe
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\bin\Debug\RezystorDoTranzystora 2.0.pdb
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoTranzystora.Form111.resources
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoTranzystora.HelpForm.resources
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoTranzystora.Properties.Resources.resources
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoTranzystora.csproj.GenerateResource.Cache
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoTranzystora 2.0.exe
+D:\Desktop\Dropbox\=Wynalazki Kuby Miszcza\Rezystor_do_bazy\RezystorDoBazy\obj\Debug\RezystorDoTranzystora 2.0.pdb
