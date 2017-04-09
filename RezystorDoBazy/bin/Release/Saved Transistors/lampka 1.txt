@@ -1,0 +1,9 @@
+﻿Rezystor do bazy tranzystora
+5
+19
+20
+2
+1
+1.2
+20
+1

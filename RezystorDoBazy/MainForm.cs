@@ -19,20 +19,20 @@ namespace RezystorDoTranzystora
         float Ibase, P, Rbase, Uload,Iload;//wyniki
         private string _currentSavedFileName;
         private string _titleBar;
-        private NumberFormatInfo nfi;
-
+        private String wrong_decsep;
+        private String dec_separator = "" + Convert.ToChar(CultureInfo.CurrentCulture.NumberFormat.NumberDecimalSeparator);
 
         public Form111()
         {
             InitializeComponent();
-            nfi = new NumberFormatInfo();
-            nfi.NumberDecimalSeparator = ".";
+            if (dec_separator == ",") wrong_decsep = ".";
+            else if (dec_separator == ".") wrong_decsep = ",";
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             _titleBar = this.Text;
-
+            this.TopMost = true;
             toolTip1.SetToolTip(tbRload, "R obciążenia,\njak trzeba sam prad - wcelowac w żądany prad Ic zmieniajac Rload");
             toolTip1.SetToolTip(tbUwe, "napiecie sterujace na wejsciu");
             toolTip1.SetToolTip(tbUwy, "napiecie na wyjsciu");
@@ -52,23 +52,23 @@ namespace RezystorDoTranzystora
 
         void tb2val()
         {
-            Rload = float.Parse(tbRload.Text, CultureInfo.InvariantCulture);
-            Uwe = float.Parse(tbUwe.Text, CultureInfo.InvariantCulture);
-            Uwy = float.Parse(tbUwy.Text, CultureInfo.InvariantCulture);
-            k = float.Parse(tbk.Text, CultureInfo.InvariantCulture);
-            Ucesat = float.Parse(tbUcesat.Text, CultureInfo.InvariantCulture);
-            Ube = float.Parse(tbUbe.Text, CultureInfo.InvariantCulture);
-            hfe = float.Parse(tbhfe.Text, CultureInfo.InvariantCulture);
-            Ptot = float.Parse(tbPtot.Text, CultureInfo.InvariantCulture);
+            Rload = float.Parse(tbRload.Text.Replace(wrong_decsep,dec_separator));
+            Uwe = float.Parse(tbUwe.Text.Replace(wrong_decsep,dec_separator));
+            Uwy = float.Parse(tbUwy.Text.Replace(wrong_decsep,dec_separator));
+            k = float.Parse(tbk.Text.Replace(wrong_decsep,dec_separator));
+            Ucesat = float.Parse(tbUcesat.Text.Replace(wrong_decsep,dec_separator));
+            Ube = float.Parse(tbUbe.Text.Replace(wrong_decsep,dec_separator));
+            hfe = float.Parse(tbhfe.Text.Replace(wrong_decsep,dec_separator));
+            Ptot = float.Parse(tbPtot.Text.Replace(wrong_decsep,dec_separator));
        }
 
         void val2tb()
         {
-            tbIload.Text = Math.Round(Iload,2).ToString(nfi);
-            tbUload.Text = Math.Round(Uload,2).ToString(nfi);
-            tbIbase.Text = Math.Round(Ibase,2).ToString(nfi);
-            tbRbase.Text = Math.Round(Rbase,2).ToString(nfi);
-            tbP.Text = Math.Round(P,2).ToString(nfi);
+            tbIload.Text = (Math.Round(Iload,2)).ToString();
+            tbUload.Text = (Math.Round(Uload,2)).ToString();
+            tbIbase.Text = (Math.Round(Ibase,2)).ToString();
+            tbRbase.Text = (Math.Round(Rbase,2)).ToString();
+            tbP.Text = (Math.Round(P,2)).ToString();
         }
         
         private void button1_Click(object sender, EventArgs e)
@@ -95,138 +95,18 @@ namespace RezystorDoTranzystora
             obliczRb();
         }
 
-        private void zapiszJakoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
-                saveFileDialog1.Filter = "Txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                saveFileDialog1.FilterIndex = 1;
-                if (!(Directory.Exists(Directory.GetCurrentDirectory() + "\\Saved Transistors")))//jesli nie istnieje
-                {
-                    Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\Saved Transistors");
-                }
-                saveFileDialog1.InitialDirectory=Directory.GetCurrentDirectory() + "\\Saved Transistors";
-                saveFileDialog1.RestoreDirectory = true;
-                saveFileDialog1.DefaultExt = ".pn";
-                saveFileDialog1.FileName = "Tranzystor1";
-                Stream myStream;
-
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    if ((myStream = saveFileDialog1.OpenFile()) != null)
-                    {
-                        using (StreamWriter writer = new StreamWriter(myStream, System.Text.Encoding.UTF8))
-                        {
-                            writer.WriteLine(_titleBar);
-                            writer.WriteLine(tbUwe.Text);
-                            writer.WriteLine(tbRload.Text);
-                            writer.WriteLine(tbUwy.Text);
-                            writer.WriteLine(tbk.Text);
-                            writer.WriteLine(tbUcesat.Text);
-                            writer.WriteLine(tbUbe.Text);
-                            writer.WriteLine(tbhfe.Text);
-                            writer.WriteLine(tbPtot.Text);
-                        }
-                        myStream.Close();
-
-                    }
-                }
-                //String AktualnyPlikDoZapisu_nazwa = System.IO.Path.GetFileNameWithoutExtension(AktualnyPlikDoZapisu);
-                _currentSavedFileName = saveFileDialog1.FileName;
-                this.Text = _titleBar + " - " + System.IO.Path.GetFileNameWithoutExtension(_currentSavedFileName); 
-            }
-        }
-
-        private void zapiszToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
-                if (_currentSavedFileName == null) zapiszJakoToolStripMenuItem_Click(sender, e);
-                
-                FileStream file = new FileStream(_currentSavedFileName, FileMode.Create);
-                using (StreamWriter writer = new StreamWriter(file, System.Text.Encoding.UTF8))
-                {
-                    writer.WriteLine(_titleBar);
-                    writer.WriteLine(tbUwe.Text);
-                    writer.WriteLine(tbRload.Text);
-                    writer.WriteLine(tbUwy.Text);
-                    writer.WriteLine(tbk.Text);
-                    writer.WriteLine(tbUcesat.Text);
-                    writer.WriteLine(tbUbe.Text);
-                    writer.WriteLine(tbhfe.Text);
-                    writer.WriteLine(tbPtot.Text);
-                }
-                file.Close();
-            }
-        }
-
-        private void wczytajToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            {
-                Stream myStream = null;
-                OpenFileDialog openFileDialog1 = new OpenFileDialog();
-                openFileDialog1.Filter = "Txt files (*.txt)|*.txt|All files (*.*)|*.*";
-                openFileDialog1.FilterIndex = 1;
-                if (!(Directory.Exists(Directory.GetCurrentDirectory() + "\\Saved Transistors")))//jesli nie istnieje
-                {
-                    Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\Saved Transistors");
-                }
-                openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory() + "\\Saved Transistors";
-                openFileDialog1.RestoreDirectory = true;
-
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    try
-                    {
-                        if ((myStream = openFileDialog1.OpenFile()) != null)
-                        {
-                            using (StreamReader reader = new StreamReader(myStream, System.Text.Encoding.UTF8))
-                            {
-                                // Insert code to read the stream here.
-                                while (!reader.EndOfStream)
-                                {
-                                    this.Text= reader.ReadLine(); 
-                                    
-                                    tbUwe.Text= reader.ReadLine();
-                                    tbRload.Text=reader.ReadLine();
-                                    tbUwy.Text=reader.ReadLine();
-                                    tbk.Text=reader.ReadLine();
-                                    tbUcesat.Text=reader.ReadLine();
-                                    tbUbe.Text=reader.ReadLine();
-                                    tbhfe.Text=reader.ReadLine();
-                                    tbPtot.Text=reader.ReadLine();
-
-                                    obliczRb();
-                                }
-
-                                myStream.Close();
-                            }
-                        }
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message + ex.StackTrace);
-                    }
-                }
-                //String AktualnyPlikDoZapisu_nazwa = System.IO.Path.GetFileNameWithoutExtension(AktualnyPlikDoZapisu);
-                _currentSavedFileName = openFileDialog1.FileName;
-                if (_currentSavedFileName != "")
-                {
-                    this.Text = _titleBar + " - " + System.IO.Path.GetFileNameWithoutExtension(_currentSavedFileName);
-                }
-            }
-        }
-
         private void tbRload_KeyDown(object sender, KeyEventArgs e)
         {
             //Rload = float.Parse(tbRload.Text);
             if (e.KeyCode == Keys.Up)
             {
                 Rload += 0.01f;
-                tbRload.Text = Rload.ToString(nfi);
+                tbRload.Text = Rload.ToString(dec_separator);
             }
             if (e.KeyCode == Keys.Down)
             {
                 Rload -= 0.01f;
-                tbRload.Text = Rload.ToString(nfi);
+                tbRload.Text = Rload.ToString(dec_separator);
             }
             obliczRb();
         }
@@ -241,7 +121,20 @@ namespace RezystorDoTranzystora
 
         }
 
- 
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            HelpForm frm = new HelpForm();
+            frm.Show();
+        }
+
+        private void TopMostMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.TopMost = !this.TopMost;
+            if (this.TopMost)
+                TopMostMenuItem1.Image = Properties.Resources.topmostactive;
+            else
+                TopMostMenuItem1.Image = Properties.Resources.topmostinactive;
+        }
 
         private void obliczRb()
         {

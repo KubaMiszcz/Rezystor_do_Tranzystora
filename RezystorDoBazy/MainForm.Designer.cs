@@ -73,6 +73,7 @@
             this.zapiszToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapiszJakoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.TopMostMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -101,7 +102,6 @@
             this.tbUcesat.BackColor = System.Drawing.SystemColors.Info;
             this.tbUcesat.Location = new System.Drawing.Point(73, 40);
             this.tbUcesat.Name = "tbUcesat";
-            this.tbUcesat.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbUcesat.Size = new System.Drawing.Size(40, 20);
             this.tbUcesat.TabIndex = 5;
             this.tbUcesat.Text = "0.09";
@@ -178,7 +178,6 @@
             this.tbk.BackColor = System.Drawing.SystemColors.Info;
             this.tbk.Location = new System.Drawing.Point(73, 18);
             this.tbk.Name = "tbk";
-            this.tbk.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbk.Size = new System.Drawing.Size(40, 20);
             this.tbk.TabIndex = 10;
             this.tbk.Text = "2";
@@ -201,7 +200,6 @@
             this.tbP.Location = new System.Drawing.Point(73, 128);
             this.tbP.Name = "tbP";
             this.tbP.ReadOnly = true;
-            this.tbP.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbP.Size = new System.Drawing.Size(40, 20);
             this.tbP.TabIndex = 18;
             this.tbP.TabStop = false;
@@ -241,7 +239,6 @@
             this.tbhfe.BackColor = System.Drawing.SystemColors.Info;
             this.tbhfe.Location = new System.Drawing.Point(73, 84);
             this.tbhfe.Name = "tbhfe";
-            this.tbhfe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbhfe.Size = new System.Drawing.Size(40, 20);
             this.tbhfe.TabIndex = 7;
             this.tbhfe.Text = "350";
@@ -253,7 +250,6 @@
             this.tbUbe.BackColor = System.Drawing.SystemColors.Info;
             this.tbUbe.Location = new System.Drawing.Point(73, 62);
             this.tbUbe.Name = "tbUbe";
-            this.tbUbe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbUbe.Size = new System.Drawing.Size(40, 20);
             this.tbUbe.TabIndex = 6;
             this.tbUbe.Text = "0.7";
@@ -265,7 +261,6 @@
             this.tbPtot.BackColor = System.Drawing.SystemColors.Info;
             this.tbPtot.Location = new System.Drawing.Point(73, 106);
             this.tbPtot.Name = "tbPtot";
-            this.tbPtot.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbPtot.Size = new System.Drawing.Size(40, 20);
             this.tbPtot.TabIndex = 8;
             this.tbPtot.Text = "0.5";
@@ -286,7 +281,6 @@
             this.tbRload.BackColor = System.Drawing.SystemColors.Info;
             this.tbRload.Location = new System.Drawing.Point(80, 14);
             this.tbRload.Name = "tbRload";
-            this.tbRload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbRload.Size = new System.Drawing.Size(50, 20);
             this.tbRload.TabIndex = 1;
             this.tbRload.Text = "50";
@@ -308,7 +302,6 @@
             this.tbUwy.BackColor = System.Drawing.SystemColors.Info;
             this.tbUwy.Location = new System.Drawing.Point(10, 18);
             this.tbUwy.Name = "tbUwy";
-            this.tbUwy.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbUwy.Size = new System.Drawing.Size(40, 20);
             this.tbUwy.TabIndex = 3;
             this.tbUwy.Text = "12";
@@ -320,7 +313,6 @@
             this.tbUwe.BackColor = System.Drawing.SystemColors.Info;
             this.tbUwe.Location = new System.Drawing.Point(8, 16);
             this.tbUwe.Name = "tbUwe";
-            this.tbUwe.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbUwe.Size = new System.Drawing.Size(40, 20);
             this.tbUwe.TabIndex = 2;
             this.tbUwe.Text = "5";
@@ -343,7 +335,6 @@
             this.tbIload.Location = new System.Drawing.Point(80, 37);
             this.tbIload.Name = "tbIload";
             this.tbIload.ReadOnly = true;
-            this.tbIload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbIload.Size = new System.Drawing.Size(50, 20);
             this.tbIload.TabIndex = 4;
             this.tbIload.TabStop = false;
@@ -369,7 +360,6 @@
             this.tbRbase.Location = new System.Drawing.Point(76, 35);
             this.tbRbase.Name = "tbRbase";
             this.tbRbase.ReadOnly = true;
-            this.tbRbase.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbRbase.Size = new System.Drawing.Size(45, 20);
             this.tbRbase.TabIndex = 16;
             this.tbRbase.TabStop = false;
@@ -394,7 +384,6 @@
             this.tbIbase.Location = new System.Drawing.Point(76, 13);
             this.tbIbase.Name = "tbIbase";
             this.tbIbase.ReadOnly = true;
-            this.tbIbase.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbIbase.Size = new System.Drawing.Size(45, 20);
             this.tbIbase.TabIndex = 10;
             this.tbIbase.TabStop = false;
@@ -408,7 +397,6 @@
             this.tbUload.Location = new System.Drawing.Point(80, 59);
             this.tbUload.Name = "tbUload";
             this.tbUload.ReadOnly = true;
-            this.tbUload.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.tbUload.Size = new System.Drawing.Size(50, 20);
             this.tbUload.TabIndex = 9;
             this.tbUload.TabStop = false;
@@ -531,6 +519,7 @@
             this.zapiszToolStripMenuItem,
             this.zapiszJakoToolStripMenuItem,
             this.helpToolStripMenuItem,
+            this.TopMostMenuItem1,
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -564,6 +553,14 @@
             this.helpToolStripMenuItem.Image = global::RezystorDoTranzystora.Properties.Resources.fhelp;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
             this.helpToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.helpToolStripMenuItem.Click += new System.EventHandler(this.helpToolStripMenuItem_Click);
+            // 
+            // TopMostMenuItem1
+            // 
+            this.TopMostMenuItem1.Image = ((System.Drawing.Image)(resources.GetObject("TopMostMenuItem1.Image")));
+            this.TopMostMenuItem1.Name = "TopMostMenuItem1";
+            this.TopMostMenuItem1.Size = new System.Drawing.Size(28, 20);
+            this.TopMostMenuItem1.Click += new System.EventHandler(this.TopMostMenuItem1_Click);
             // 
             // exitToolStripMenuItem
             // 
@@ -571,6 +568,7 @@
             this.exitToolStripMenuItem.Image = global::RezystorDoTranzystora.Properties.Resources.fexit;
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(28, 20);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
@@ -658,6 +656,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem TopMostMenuItem1;
     }
 }
 
