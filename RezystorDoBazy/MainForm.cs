@@ -90,11 +90,6 @@ namespace RezystorDoTranzystora
         }
          
 
-        private void tbk_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
         private void tbRload_KeyDown(object sender, KeyEventArgs e)
         {
             //Rload = float.Parse(tbRload.Text);
@@ -111,15 +106,6 @@ namespace RezystorDoTranzystora
             obliczRb();
         }
 
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -136,84 +122,50 @@ namespace RezystorDoTranzystora
                 TopMostMenuItem1.Image = Properties.Resources.topmostinactive;
         }
 
+        private void aobliczRbzTextBox(object sender, EventArgs e)
+        {
+            TextBox tb = sender as TextBox;
+            if (tb.Text != "" || tb.Text!=null)
+            {
+                obliczRb();
+            }
+        }
+
         private void obliczRb()
         {
-            tb2val();
-            Iload = (Uwy - Ucesat) / Rload;
-            Uload = Uwy - Ucesat;
-            Ibase = (Iload * k) / hfe;
-            Rbase = (Uwe - Ube) / Ibase;
-            P = Ibase*Ube + Iload * Ucesat;
+                tb2val();
+                Iload = (Uwy - Ucesat) / Rload;
+                Uload = Uwy - Ucesat;
+                Ibase = (Iload * k) / hfe;
+                Rbase = (Uwe - Ube) / Ibase;
+                P = Ibase * Ube + Iload * Ucesat;
 
-            if (P < Ptot)
-            {
-                pictureBox1.Image = RezystorDoTranzystora.Properties.Resources.ok;
-                tbP.BackColor = Color.PeachPuff;
-            }
-            else
-            {
-                pictureBox1.Image = RezystorDoTranzystora.Properties.Resources.error;
-                tbP.BackColor = Color.Red;
-            }
+                if (P < Ptot)
+                {
+                    pictureBox1.Image = RezystorDoTranzystora.Properties.Resources.ok;
+                    tbP.BackColor = Color.PeachPuff;
+                }
+                else
+                {
+                    pictureBox1.Image = RezystorDoTranzystora.Properties.Resources.error;
+                    tbP.BackColor = Color.Red;
+                }
 
-            Iload=Iload * 1000f;//A->mA
-            Ibase = Ibase * 1000f;//A->mA
-            if (Ibase < 1f)
-            {
-                Ibase = Ibase * 1000f;//mA->uA
-                label9.Text = "Ibase [uA]";
-            }
-            else
-            {
-                label9.Text = "Ibase [mA]";
-            }
-            Rbase = Rbase / 1000f; //ohm->kohm
-            val2tb();
+                Iload = Iload * 1000f;//A->mA
+                Ibase = Ibase * 1000f;//A->mA
+                if (Ibase < 1f)
+                {
+                    Ibase = Ibase * 1000f;//mA->uA
+                    label9.Text = "Ibase [uA]";
+                }
+                else
+                {
+                    label9.Text = "Ibase [mA]";
+                }
+                Rbase = Rbase / 1000f; //ohm->kohm
+                val2tb();
+            
         }
 
-        private void tbJ_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void tbU_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void tbRthjc_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void tbRthcs_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void tbRthsa_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void tbP_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void tbTamb_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void tbRth_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            obliczRb();
-        }
     }
 }

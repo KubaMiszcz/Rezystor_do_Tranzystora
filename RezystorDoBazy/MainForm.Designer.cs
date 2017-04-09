@@ -106,7 +106,7 @@
             this.tbUcesat.TabIndex = 5;
             this.tbUcesat.Text = "0.09";
             this.tbUcesat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbUcesat.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.tbUcesat.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             // 
             // linkmail
             // 
@@ -182,7 +182,7 @@
             this.tbk.TabIndex = 10;
             this.tbk.Text = "2";
             this.tbk.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbk.TextChanged += new System.EventHandler(this.tbk_TextChanged);
+            this.tbk.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             // 
             // label10
             // 
@@ -243,7 +243,7 @@
             this.tbhfe.TabIndex = 7;
             this.tbhfe.Text = "350";
             this.tbhfe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbhfe.TextChanged += new System.EventHandler(this.tbRthcs_TextChanged);
+            this.tbhfe.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             // 
             // tbUbe
             // 
@@ -254,7 +254,7 @@
             this.tbUbe.TabIndex = 6;
             this.tbUbe.Text = "0.7";
             this.tbUbe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbUbe.TextChanged += new System.EventHandler(this.tbRthjc_TextChanged);
+            this.tbUbe.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             // 
             // tbPtot
             // 
@@ -265,7 +265,7 @@
             this.tbPtot.TabIndex = 8;
             this.tbPtot.Text = "0.5";
             this.tbPtot.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbPtot.TextChanged += new System.EventHandler(this.tbRthsa_TextChanged);
+            this.tbPtot.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             // 
             // label7
             // 
@@ -285,7 +285,7 @@
             this.tbRload.TabIndex = 1;
             this.tbRload.Text = "50";
             this.tbRload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbRload.TextChanged += new System.EventHandler(this.tbTamb_TextChanged);
+            this.tbRload.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             this.tbRload.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tbRload_KeyDown);
             // 
             // label2
@@ -306,7 +306,7 @@
             this.tbUwy.TabIndex = 3;
             this.tbUwy.Text = "12";
             this.tbUwy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbUwy.TextChanged += new System.EventHandler(this.tbJ_TextChanged);
+            this.tbUwy.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             // 
             // tbUwe
             // 
@@ -317,7 +317,7 @@
             this.tbUwe.TabIndex = 2;
             this.tbUwe.Text = "5";
             this.tbUwe.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbUwe.TextChanged += new System.EventHandler(this.tbU_TextChanged);
+            this.tbUwe.TextChanged += new System.EventHandler(this.aobliczRbzTextBox);
             // 
             // label3
             // 
@@ -340,7 +340,6 @@
             this.tbIload.TabStop = false;
             this.tbIload.Text = "2.4";
             this.tbIload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbIload.TextChanged += new System.EventHandler(this.tbP_TextChanged);
             // 
             // label12
             // 
@@ -351,7 +350,6 @@
             this.label12.Size = new System.Drawing.Size(75, 13);
             this.label12.TabIndex = 17;
             this.label12.Text = "Rbase [kOhm]";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // tbRbase
             // 
@@ -375,7 +373,6 @@
             this.label9.Size = new System.Drawing.Size(57, 13);
             this.label9.TabIndex = 14;
             this.label9.Text = "Ibase [mA]";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // tbIbase
             // 
@@ -402,7 +399,6 @@
             this.tbUload.TabStop = false;
             this.tbUload.Text = "1";
             this.tbUload.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbUload.TextChanged += new System.EventHandler(this.tbRth_TextChanged);
             // 
             // label8
             // 
